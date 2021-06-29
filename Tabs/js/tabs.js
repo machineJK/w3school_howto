@@ -4,21 +4,19 @@ document.addEventListener("DOMContentLoaded",function(){
     let tabs_contents = document.getElementsByClassName("tabs_content");
 
     tabs_wrapper.addEventListener("click",function(e){
-        // console.log(e.target.classList);
-        if(e.target.classList.contains("active")){
-            return;
-        }else{
+        if(!e.target.classList.contains("active")){
             for(let i = 0; i < tabs.length; i++){
                 tabs[i].classList.remove("active");
                 tabs_contents[i].classList.remove("active");
             }
-            e.target.classList.add("acitve");
+            e.target.classList.add("active");
+
             if(e.target.classList.contains("tab1")){
-                document.getElementsByClassName("tab1_content")[0].classList.add("active");
+                tabs_contents[0].classList.add("active");
             }else if(e.target.classList.contains("tab2")){
-                document.getElementsByClassName("tab2_content")[0].classList.add("active");
+                tabs_contents[1].classList.add("active");
             }else if(e.target.classList.contains("tab3")){
-                document.getElementsByClassName("tab3_content")[0].classList.add("active");
+                tabs_contents[2].classList.add("active");
             }
         }
     });
