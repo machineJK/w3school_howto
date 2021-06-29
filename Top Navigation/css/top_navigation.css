@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+html,body {width: 100%; height: 100%; margin: 0; padding: 0;}
+body * {box-sizing: border-box;}
+a {text-decoration: none; color: #000;}
+ul, ul li {list-style-type: none; padding: 0; margin: 0;} 
+
+div {width: 800px; margin: 0 auto; padding: 20px;}
+.container {display: flex; background-color: #333; width: 800px; margin: 0 auto;}
+.container li a {display: block; width: 100%; height: 100%; color: #fff; padding: 20px;}
+.container li a.active {background-color: #04AA6D;}
+.container li a:not(.active):hover, .container li a:not(.active):focus {background-color: #ddd; color: #000;}
+
+
+
+
