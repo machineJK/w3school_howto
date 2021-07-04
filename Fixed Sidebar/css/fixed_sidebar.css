@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+html,body {width: 100%; height: 100%; margin: 0; padding: 0;}
+body * {box-sizing: border-box;}
+a {text-decoration: none; color: #000;}
+ul, ul li {margin: 0; padding: 0; list-style-type: none;}
+
+.side_bar {width: 200px; height: 100%; position: fixed; top: 0; left: 0; background-color: #111;}
+.side_bar li a {display: block; width: 100%; height: 100%; color: #818181; text-align: center; padding: 20px 0;}
+.side_bar li a:hover, .side_bar li a:focus {color: #fff;}
+
+.content {padding-left: 250px;}
+.content h1 {margin: 0; padding: 20px 0;}
