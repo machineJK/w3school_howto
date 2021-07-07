@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        html,body {width: 100%; height: 100%; margin: 0; padding: 0;}
+        body {box-sizing: border-box;}
+        div.displayNone {display: none;}
+        div.opacityZero {opacity: 0;}
+    </style>
+</head>
+<body>
+    <div style="width: 100px; height: 100px; background-color: blanchedalmond; position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%); transition: opacity 0.5s ease;"></div>
+    <button type="button" style="position: absolute; top: 40%; left: 50%; transform: translate(-50%,-50%);">trigger</button>
+    
+
+    <script>
+        let btn = document.getElementsByTagName("button")[0];
+        let box = document.getElementsByTagName("div")[0];
+        btn.addEventListener("click",function(){
+            if(!box.classList.contains("displayNone")){
+                box.classList.add("opacityZero");
+                box.addEventListener("transitionend",function(){
+                    box.classList.add("displayNone");
+                },{once: true});
+                // once: true 를 준 이유는 else 부분에서 opacityZero클래스를 제거할때 transitionend 이벤트가 한번 더 실행되기 때문
+                // addEventListener 이후 바로 removeEventListener를 하면 이벤트가 실행되자마자 제거됨. 그래서 작동 X
+            }else{
+                box.classList.remove("displayNone");
+                setTimeout(function(){
+                    box.classList.remove("opacityZero");
+                },1);
+            }
+        });
+    </script>
+</body>
+</html>

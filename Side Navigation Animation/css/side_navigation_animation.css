@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+html,body {width: 100%; height: 100%; margin: 0; padding: 0;}
+body * {box-sizing: border-box;}
+a {text-decoration: none; color: #000;}
+ul, ul li {margin: 0; padding: 0; list-style-type: none;}
+
+/* sidenav_overlay */
+.btn_overlay {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.overlay_container {position: fixed; top: 0; left: 0; width: 0; height: 100%; background-color: #111; padding-top: 50px; overflow-x: hidden; transition: width 0.5s ease;}
+.overlay_container li:not(.btn_cls) a {color: #818181; display: block; width: 100%; height: 100%; transition: color 0.25s ease; padding: 20px 0 20px 40px; font-size: 26px;}
+.overlay_container li a:hover, .overlay_container li a:focus {color: #f1f1f1;}
+.overlay_container li.btn_cls {position: absolute; top: 0; right: 0; width: 50px; height: 50px; color: #000;}
+.overlay_container li.btn_cls a {display: flex; width: 100%; height: 100%; font-size: 30px; transition: color 0.25s ease; color: #818181; justify-content: center; align-items: center;}
+.overlay_container li.btn_cls a:hover, .overlay_container li.btn_cls a:focus {color: #f1f1f1;}
+/* sidenav overlay without animation */
+.btn_overlay_without_animation {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.overlay_without_animation_container {position: fixed; top: 0; left: 0; width: 250px; height: 100%; background-color: #111; padding-top: 50px; display: none;}
+.overlay_without_animation_container.active {display: block;}
+.overlay_without_animation_container li:not(.btn_cls) a {color: #818181; display: block; width: 100%; height: 100%; transition: color 0.25s ease; padding: 20px 0 20px 40px; font-size: 26px;}
+.overlay_without_animation_container li a:hover, .overlay_container li a:focus {color: #f1f1f1;}
+.overlay_without_animation_container li.btn_cls {position: absolute; top: 0; right: 0; width: 50px; height: 50px; color: #000;}
+.overlay_without_animation_container li.btn_cls a {display: flex; width: 100%; height: 100%; font-size: 30px; transition: color 0.25s ease; color: #818181; justify-content: center; align-items: center;}
+.overlay_without_animation_container li.btn_cls a:hover, .overlay_container li.btn_cls a:focus {color: #f1f1f1;}
+/* sidenav push width/opacity */
+.btn_push_width_opacity {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.push_width_opacity {position: fixed; top: 0; left: 0; width: 0; height: 100%; background-color: #111; padding-top: 50px; overflow-x: hidden; transition: width 0.5s ease; z-index: 999;}
+.push_width_opacity li:not(.btn_cls) a {color: #818181; display: block; width: 100%; height: 100%; transition: color 0.25s ease; padding: 20px 0 20px 40px; font-size: 26px;}
+.push_width_opacity li a:hover, .overlay_container li a:focus {color: #f1f1f1;}
+.push_width_opacity li.btn_cls {position: absolute; top: 0; right: 0; width: 50px; height: 50px; color: #000;}
+.push_width_opacity li.btn_cls a {display: flex; width: 100%; height: 100%; font-size: 30px; transition: color 0.25s ease; color: #818181; justify-content: center; align-items: center;}
+.push_width_opacity li.btn_cls a:hover, .overlay_container li.btn_cls a:focus {color: #f1f1f1;}
+.ctt {transition: margin 0.5s ease;}
+.bg_black {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0; display: none; transition: opacity 0.5s ease;}
+/* sidenav push */
+.btn_push {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.push_container {position: fixed; top: 0; left: 0; width: 0; height: 100%; background-color: #111; padding-top: 50px; overflow-x: hidden; z-index: 999;}
+.push_container li:not(.btn_cls) a {color: #818181; display: block; width: 100%; height: 100%; transition: color 0.25s ease; padding: 20px 0 20px 40px; font-size: 26px;}
+.push_container li a:hover, .overlay_container li a:focus {color: #f1f1f1;}
+.push_container li.btn_cls {position: absolute; top: 0; right: 0; width: 50px; height: 50px; color: #000;}
+.push_container li.btn_cls a {display: flex; width: 100%; height: 100%; font-size: 30px; transition: color 0.25s ease; color: #818181; justify-content: center; align-items: center;}
+.push_container li.btn_cls a:hover, .overlay_container li.btn_cls a:focus {color: #f1f1f1;}
+.ctt_push {transition: margin 0.5s ease;}
+.bg_black_push {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; display: none;}
+.bg_black_push.active {display: block;}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 0.5;}
+}
+@keyframes fadeOut {
+    0% {opacity: 0.5;}
+    100% {opacity: 0;}
+}
+@keyframes widthOn {
+    0% {width: 0;}
+    100% {width: 250px;}
+}
+@keyframes widthOff {
+    0% {width: 250px;}
+    100% {width: 0;}
+}
+/* sidenav push2 */
+.btn_push2 {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.push2_container {position: fixed; top: 0; left: 0; width: 0; height: 100%; background-color: #111; padding-top: 50px; overflow-x: hidden; z-index: 999; transition: width 0.5s ease;}
+.push2_container li:not(.btn_cls) a {color: #818181; display: block; width: 100%; height: 100%; transition: color 0.25s ease; padding: 20px 0 20px 40px; font-size: 26px;}
+.push2_container li a:hover, .overlay_container li a:focus {color: #f1f1f1;}
+.push2_container li.btn_cls {position: absolute; top: 0; right: 0; width: 50px; height: 50px; color: #000;}
+.push2_container li.btn_cls a {display: flex; width: 100%; height: 100%; font-size: 30px; transition: color 0.25s ease; color: #818181; justify-content: center; align-items: center;}
+.push2_container li.btn_cls a:hover, .overlay_container li.btn_cls a:focus {color: #f1f1f1;}
+.ctt_push2 {transition: margin 0.5s ease;}
+.bg_black_push2 {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; transition: opacity 0.5s ease; opacity: 0.5;}
+.bg_black_push2.displayNone {display: none;}
+.bg_black_push2.opacityZero {opacity: 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
