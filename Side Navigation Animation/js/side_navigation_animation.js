@@ -93,8 +93,19 @@ document.addEventListener("DOMContentLoaded",function(){
         });
 
     }
+    //sidenav_fill_width
+    if(document.getElementsByClassName("btn_full_width")[0] != undefined){
+        let btn_full_width = document.getElementsByClassName("btn_full_width")[0];
+        let push_full_width = document.getElementsByClassName("push_full_width")[0];
+        let btn_cls_full_width = document.getElementsByClassName("btn_cls_full_width")[0];
 
-
+        btn_full_width.addEventListener("click",function(){
+            push_full_width.style.width = "100%";
+        });
+        btn_cls_full_width.addEventListener("click",function(){
+            push_full_width.style.width = "0";   
+        });
+    }
 
 
 
