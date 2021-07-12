@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+html,body {width: 100%; height: 100%; margin: 0; padding: 0;}
+body * {box-sizing: border-box;}
+a {text-decoration: none; color: #000;}
+ul, ul li {margin: 0; padding: 0; list-style-type: none;}
+
+.btns {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); display: flex; flex-direction: column; z-index: 0;}
+.btns button {margin-bottom: 20px;}
+.content { padding: 30px; transition: all 0.5s ease; width: 100%; height: 100%; background-color: #fff;}
+/* Open Off-Canvas Menu */
+.container_openOff {position: fixed; top: 0; left: 0; background-color: #111; height: 100%; width: 0; padding-top: 100px; overflow-x: hidden; transition: width 0.5s ease;}
+.container_openOff li {margin-bottom: 30px;}
+.container_openOff li a {display: block; width: 100%; height: 100%; color: #818181; font-size: 30px; padding-left: 40px; transition: color 0.25s ease;}
+.container_openOff li a:hover, .container li a:focus {color: #fff;}
+.container_openOff .btn_cls {position: absolute; top: 0%; right: 0%;}
+.container_openOff .btn_cls a {display: flex; width: 50px; height: 50px; font-size: 30px; justify-content: center; align-items: center; padding: 0;}
+/* Off-Canvas Menu w/opacity */
+.container_wOpacity {position: fixed; top: 0; left: 0; background-color: #111; height: 100%; width: 0; padding-top: 100px; overflow-x: hidden; transition: width 0.5s ease;}
+.container_wOpacity li {margin-bottom: 30px;}
+.container_wOpacity li a {display: block; width: 100%; height: 100%; color: #818181; font-size: 30px; padding-left: 40px; transition: color 0.25s ease;}
+.container_wOpacity li a:hover, .container li a:focus {color: #fff;}
+.container_wOpacity .btn_cls {position: absolute; top: 0%; right: 0%;}
+.container_wOpacity .btn_cls a {display: flex; width: 50px; height: 50px; font-size: 30px; justify-content: center; align-items: center; padding: 0;}
+
+
+
+
+
