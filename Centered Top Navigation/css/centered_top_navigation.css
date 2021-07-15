@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+html,body {width: 100%; height: 100%; margin: 0; padding: 0;}
+body * {box-sizing: border-box;}
+a {text-decoration: none; color: #000;}
+ul, ul li {margin: 0; padding: 0; list-style-type: none;}
+
+.container {display: flex; background-color: #333; justify-content: space-between;}
+.container ul {display: flex;}
+.container ul li {transition: background-color 0.25s ease;}
+.container ul li.active {background-color: #04AA6D;}
+.container ul li:not(.active):hover {background-color: #ddd;}
+.container ul li a {color: #fff; width: 100%; height: 100%; display: block; padding: 10px 20px;}
+
+.responsive {display: flex; background-color: #333; justify-content: space-between; position: relative; align-items: center;}
+.responsive ul {display: flex;}
+.responsive ul li {transition: background-color 0.25s ease;}
+.responsive ul li.active {background-color: #04AA6D;}
+.responsive ul li:not(.active):hover {background-color: #ddd;}
+.responsive ul li a {color: #fff; width: 100%; height: 100%; display: block; padding: 10px 20px;}
+.responsive ul.home {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+@media screen and (max-width:999px) {
+    .responsive {flex-wrap: wrap; justify-content: flex-start;}
+    .responsive ul.home {position: static; transform: unset;}
+    .responsive ul {width: 100%; display: block;}
+    .responsive ul li {width: 100%;}
+    .responsive ul li a {text-align: center;}
+}
